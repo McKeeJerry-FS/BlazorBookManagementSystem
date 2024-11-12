@@ -1,9 +1,11 @@
 using BlazorBookManagementSystem.BookServices;
 using BlazorBookManagementSystem.BookServices.Interfaces;
 using BlazorBookManagementSystem.Data;
+using BlazorBookManagementSystem.Models;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
+using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +22,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddSingleton<StateContainer>();
+builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
+
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NDaF5cWGtCf1FpRGJGfV5ycEVPalhSTnNfUj0eQnxTdEFiWH5fcnVQT2NVWExyWQ==");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

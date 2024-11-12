@@ -18,6 +18,17 @@
     </PackageReference>
     <PackageReference Include="Npgsql" Version="7.0.1" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" />
+    <PackageReference Include="Syncfusion.Blazor.Buttons" Version="27.1.58" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="27.1.58" />
+    <PackageReference Include="Syncfusion.Blazor.Navigations" Version="27.1.58" />
+    <PackageReference Include="Syncfusion.Blazor.Notifications" Version="27.1.58" />
+    <PackageReference Include="Syncfusion.Blazor.Popups" Version="27.1.58" />
+    <PackageReference Include="Syncfusion.Blazor.Spinner" Version="27.1.58" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
 </Project>
