@@ -1,3 +1,5 @@
+using BlazorBookManagementSystem.BookServices;
+using BlazorBookManagementSystem.BookServices.Interfaces;
 using BlazorBookManagementSystem.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -16,6 +18,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("No connection string was found..."));
 });
+
+builder.Services.AddScoped<IBookService, BookService>();
 
 var app = builder.Build();
 
